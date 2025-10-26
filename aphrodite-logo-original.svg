@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <!-- ICONA PRINCIPALE: Conchiglia di Afrodite dorata -->
+  <g transform="translate(15, 15)">
+    <!-- Conchiglia principale -->
+    <path d="M25 15 C35 10, 45 15, 50 20 C55 25, 55 35, 50 40 C45 45, 35 50, 25 45 C15 40, 10 30, 15 20 C20 15, 25 15, 25 15 Z" fill="#D4AF37" stroke="#B8952E" stroke-width="1"/>
+    
+    <!-- Linee interne della conchiglia -->
+    <line x1="25" y1="20" x2="35" y2="30" stroke="#B8952E" stroke-width="0.5" opacity="0.8"/>
+    <line x1="20" y1="25" x2="30" y2="35" stroke="#B8952E" stroke-width="0.5" opacity="0.8"/>
+    <line x1="30" y1="25" x2="40" y2="35" stroke="#B8952E" stroke-width="0.5" opacity="0.8"/>
+  </g>
+  
+  <!-- TESTO: APHRODITE -->
+  <g transform="translate(80, 20)">
+    <text x="0" y="25" font-family="Garamond, Georgia, serif" font-size="28" font-weight="600" fill="#D4AF37" letter-spacing="2">APHRODITE</text>
+    
+    <!-- Linea decorativa -->
+    <line x1="0" y1="30" x2="180" y2="30" stroke="#C9A237" stroke-width="1"/>
+    
+    <!-- Sottotitolo -->
+    <text x="0" y="50" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="300" fill="#8B7355" letter-spacing="1.5">DIVINE BEAUTY</text>
+  </g>
+</svg>

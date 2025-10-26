@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <!-- ICONA PRINCIPALE: Conchiglia di Afrodite dorata mobile -->
+  <g transform="translate(10, 10)">
+    <!-- Conchiglia principale mobile -->
+    <path d="M15 10 C20 8, 25 10, 28 12 C30 14, 30 18, 28 20 C25 22, 20 24, 15 22 C10 20, 8 16, 10 14 C12 12, 15 10, 15 10 Z" fill="#D4AF37" stroke="#B8952E" stroke-width="0.8"/>
+    
+    <!-- Linea interna della conchiglia mobile -->
+    <line x1="15" y1="12" x2="22" y2="18" stroke="#B8952E" stroke-width="0.5" opacity="0.8"/>
+  </g>
+  
+  <!-- TESTO: APHRODITE mobile -->
+  <g transform="translate(50, 15)">
+    <text x="0" y="15" font-family="Garamond, Georgia, serif" font-size="16" font-weight="600" fill="#D4AF37" letter-spacing="1">APHRODITE</text>
+    
+    <!-- Sottotitolo mobile -->
+    <text x="0" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="7" font-weight="300" fill="#8B7355" letter-spacing="0.5">DIVINE BEAUTY</text>
+  </g>
+</svg>
