@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <!-- ELEMENTI BOTANICI LINE ART per mobile -->
+  <g transform="translate(8, 8)">
+    <!-- Foglie semplificate per mobile -->
+    <path d="M6 3 C7 2, 9 2, 10 3 C11 4, 11 6, 10 7 C9 8, 7 8, 6 7 C5 6, 5 4, 6 3 Z" 
+          fill="none" stroke="#C4A484" stroke-width="0.6" opacity="0.7"/>
+    <path d="M18 3 C19 2, 21 2, 22 3 C23 4, 23 6, 22 7 C21 8, 19 8, 18 7 C17 6, 17 4, 18 3 Z" 
+          fill="none" stroke="#C4A484" stroke-width="0.6" opacity="0.7"/>
+  </g>
+
+  <!-- ICONA: Conchiglia di Afrodite con dettagli botanici ridotti -->
+  <g transform="translate(10, 10)">
+    <path d="M15 10 C20 8, 25 10, 28 12 C30 14, 30 18, 28 20 C25 22, 20 24, 15 22 C10 20, 8 16, 10 14 C12 12, 15 10, 15 10 Z" 
+          fill="#D4AF37" stroke="#B8952E" stroke-width="0.8"/>
+    <line x1="15" y1="12" x2="22" y2="18" stroke="#B8952E" stroke-width="0.5" opacity="0.8"/>
+    
+    <!-- Dettaglio botanico minimo -->
+    <path d="M12 14 C13 13, 14 13, 15 14 C16 15, 16 17, 15 18 C14 19, 13 19, 12 18 C11 17, 11 15, 12 14 Z" 
+          fill="none" stroke="#C4A484" stroke-width="0.6" opacity="0.6"/>
+  </g>
+  
+  <!-- TESTO: APHRODITE mobile con tocco botanico -->
+  <g transform="translate(50, 15)">
+    <text x="0" y="15" font-family="Garamond, Georgia, serif" 
+          font-size="16" font-weight="600" fill="#D4AF37" 
+          letter-spacing="1">APHRODITE</text>
+    
+    <!-- Sottotitolo ridotto con dettaglio botanico -->
+    <text x="0" y="28" font-family="'Helvetica Neue', Arial, sans-serif" 
+          font-size="7" font-weight="300" fill="#8B7355" 
+          letter-spacing="0.5">DIVINE BEAUTY</text>
+    
+    <!-- Decorazione botanica finale mobile -->
+    <g transform="translate(120, 26)">
+      <path d="M0 2 Q3 1, 6 2 Q9 3, 12 2" 
+            fill="none" stroke="#C4A484" stroke-width="0.4" opacity="0.5"/>
+    </g>
+  </g>
+</svg>
