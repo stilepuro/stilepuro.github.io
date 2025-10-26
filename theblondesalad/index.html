@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blonde Salad - Fashion & Lifestyle Magazine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color System */
+            --primary-500: #E6C2BF;
+            --primary-700: #D4A5A1;
+            --bg-page: #F9F6F4;
+            --bg-surface: #FFFFFF;
+            --text-primary: #211F1F;
+            --text-secondary: #746C69;
+            --border-subtle: #EAE3DF;
+            
+            /* Spacing */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 64px;
+            --space-xxl: 96px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* Typography */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--space-md);
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .meta-text {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        
+        .button-text {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(249, 246, 244, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(249, 246, 244, 0.98);
+            box-shadow: 0 2px 20px rgba(33, 31, 31, 0.1);
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-sm) 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-500);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: var(--primary-500);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 550px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)), 
+                        url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwMCIgaGVpZ2h0PSIxMjAwIiB2aWV3Qm94PSIwIDAgMjAwMCAxMjAwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMjAwMCIgaGVpZ2h0PSIxMjAwIiBmaWxsPSIjRjlGNkY0Ii8+CjxwYXRoIGQ9Ik0wIDcwMEwyMDAwIDUwMEwyMDAwIDEyMDBIMHoiIGZpbGw9IiNFNkMyQkYiIG9wYWNpdHk9IjAuMyIvPgo8L3N2Zz4K') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 var(--space-md);
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: var(--space-sm);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-lg);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .cta-button {
+            background-color: var(--primary-500);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-700);
+            transform: scale(1.05);
+        }
+        
+        /* Sections */
+        .section {
+            padding: var(--space-xxl) 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-top: var(--space-sm);
+        }
+        
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .article-card {
+            background-color: var(--bg-surface);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(33, 31, 31, 0.06);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(33, 31, 31, 0.1);
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, var(--primary-500), var(--primary-700));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDMwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjRjlGNkY0Ii8+Cjx0ZXh0IHg9IjE1MCIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzQ2QzY5Ij5GQU1PT0FOPTwvdGV4dD4KPC9zdmc+') center/contain no-repeat;
+            opacity: 0.7;
+        }
+        
+        .article-content {
+            padding: var(--space-md);
+        }
+        
+        .article-category {
+            color: var(--primary-500);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .article-title {
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            line-height: 1.4;
+        }
+        
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .article-meta {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* Featured Section */
+        .featured-article {
+            background-color: var(--bg-surface);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(33, 31, 31, 0.1);
+            margin-bottom: var(--space-xl);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 400px;
+        }
+        
+        .featured-image {
+            background: linear-gradient(45deg, var(--primary-700), var(--primary-500));
+            min-height: 400px;
+            position: relative;
+        }
+        
+        .featured-content {
+            padding: var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--text-primary);
+            color: white;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-section h4 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: var(--space-sm);
+            color: var(--primary-500);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--primary-500);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid #444;
+            color: #999;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                min-height: 400px;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+            
+            .featured-article {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 var(--space-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">The Blonde Salad</a>
+                <ul class="nav-links">
+                    <li><a href="#fashion">Fashion</a></li>
+                    <li><a href="#beauty">Beauty</a></li>
+                    <li><a href="#lifestyle">Lifestyle</a></li>
+                    <li><a href="#entertainment">Entertainment</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>La Tua Dose Quotidiana di Moda e Stile</h1>
+            <p class="hero-subtitle">Scopri le ultime tendenze, ispirazioni fashion e consigli di stile dal mondo della moda internazionale</p>
+            <a href="#articles" class="cta-button">Esplora Ora</a>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-article fade-in">
+                <div class="featured-image"></div>
+                <div class="featured-content">
+                    <div class="article-category">FEATURED</div>
+                    <h3>Come Chiara Ferragni Ha Rivoluzionato il Fashion Blogging</h3>
+                    <p class="article-excerpt">Dal suo primo post nel 2009 a diventare un'icona globale del fashion e lifestyle. Scopri la storia dietro il successo di The Blonde Salad e come ha cambiato per sempre l'industria della moda digitale.</p>
+                    <div class="article-meta">27 Ottobre 2025 • by Fashion Team</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section" id="articles">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ultimi Articoli</h2>
+                <p class="section-subtitle">Le novità più fresche dal mondo fashion, beauty e lifestyle</p>
+            </div>
+            
+            <div class="articles-grid">
+                <!-- Fashion Articles -->
+                <article class="article-card fade-in">
+                    <div class="article-image"></div>
+                    <div class="article-content">
+                        <div class="article-category">Fashion</div>
+                        <h3 class="article-title">Tendenze Primavera-Estate 2025: I Colori Che Domineranno</h3>
+                        <p class="article-excerpt">Dai pastelli delicati ai toni bold, scopri i colori che spiccheranno nelle collezioni della prossima stagione e come indossarli con eleganza.</p>
+                        <div class="article-meta">27 Ottobre 2025 • by Style Editor</div>
+                    </div>
+                </article>
+
+                <article class="article-card fade-in">
+                    <div class="article-image"></div>
+                    <div class="article-content">
+                        <div class="article-category">Street Style</div>
+                        <h3 class="article-title">Street Style Milano: I Look Più Iconici della Fashion Week</h3>
+                        <p class="article-excerpt">LeIt real look delle fashion week più influenti d'Italia. Dalle passeggiate di Milano alle strade di Roma, ecco chi ha dettato le tendenze.</p>
+                        <div class="article-meta">26 Ottobre 2025 • by Street Team</div>
+                    </div>
+                </article>
+
+                <article class="article-card fade-in">
+                    <div class="article-image"></div>
+                    <div class="article-content">
+                        <div class="article-category">Beauty</div>
+                        <h3 class="article-title">Beauty Trends 2025: I Prodotti Must-Have del Momento</h3>
+                        <p class="article-excerpt">Dai skincare innovativi ai makeup bold, scopri i prodotti beauty che stanno conquistando le passerelle e le strade di tutto il mondo.</p>
+                        <div class="article-meta">25 Ottobre 2025 • by Beauty Editor</div>
+                    </div>
+                </article>
+
+                <article class="article-card fade-in">
+                    <div class="article-image"></div>
+                    <div class="article-content">
+                        <div class="article-category">Lifestyle</div>
+                        <h3 class="article-title">Come Creare un Wardrobe Capsule Perfetto</h3>
+                        <p class="article-excerpt">La guida completa per costruire un guardaroba versatile e senza tempo. Consigli pratici per investire nei pezzi giusti e creare look infiniti.</p>
+                        <div class="article-meta">24 Ottobre 2025 • by Lifestyle Team</div>
+                    </div>
+                </article>
+
+                <article class="article-card fade-in">
+                    <div class="article-image"></div>
+                    <div class="article-content">
+                        <div class="article-category">Entertainment</div>
+                        <h3 class="article-title">Oscar 2025: I Look Più Memorabili della Notte delle Stelle</h3>
+                        <p class="article-excerpt">Dalla passerella ai red carpet, scopri i look più iconici della notte degli Oscar 2025 e i trend beauty che hanno dominato l'evento.</p>
+                        <div class="article-meta">23 Ottobre 2025 • by Red Carpet Team</div>
+                    </div>
+                </article>
+
+                <article class="article-card fade-in">
+                    <div class="article-image"></div>
+                    <div class="article-content">
+                        <div class="article-category">Fashion</div>
+                        <h3 class="article-title">Sustainable Fashion: Le Marchi Eco-Friendly da Conoscere</h3>
+                        <p class="article-excerpt">Il futuro della moda è sostenibile. Scopri i brand che stanno rivoluzionando l'industria con approcci innovativi e responsabili verso l'ambiente.</p>
+                        <div class="article-meta">22 Ottobre 2025 • by Sustainable Team</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>The Blonde Salad</h4>
+                    <p>La tua dose quotidiana di moda, beauty e lifestyle. Scopri le ultime tendenze e lascia ispirare il tuo stile personale.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categorie</h4>
+                    <ul>
+                        <li><a href="#fashion">Fashion</a></li>
+                        <li><a href="#beauty">Beauty</a></li>
+                        <li><a href="#lifestyle">Lifestyle</a></li>
+                        <li><a href="#entertainment">Entertainment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Seguici</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Collaborazioni</a></li>
+                        <li><a href="#">Media Kit</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Blonde Salad. Tutti i diritti riservati. | Creato con passione per la moda italiana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
