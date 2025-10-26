@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <!-- Gradiente dorato per l'accento -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C9A237;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8952E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente per il profilo femminile -->
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0855A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ombra sottile -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#D4AF37" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Cornice decorativa superiore -->
+  <path d="M50 25 Q200 5 350 25" stroke="url(#goldGradient)" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+  
+  <!-- Profilo femminile stilizzato (ispirato all'immagine di riferimento) -->
+  <g transform="translate(60, 30)" filter="url(#softShadow)">
+    <!-- Profilo del volto -->
+    <path d="M15 25 C25 15, 40 15, 45 25 C47 30, 47 35, 44 38 C42 40, 40 42, 38 45 C37 46, 36 47, 34 48 C30 50, 28 52, 27 55 C26 57, 26 60, 27 62 C28 64, 29 65, 30 67 C32 70, 34 72, 36 75 C38 78, 38 80, 37 82 C36 84, 34 85, 32 86 C30 87, 28 87, 26 86 C24 85, 22 83, 21 81 C19 77, 18 73, 17 68 C16 60, 16 52, 17 45 C18 38, 20 32, 24 28 C26 26, 24 25, 15 25 Z" 
+          fill="url(#profileGradient)"/>
+    
+    <!-- Acconciatura elaborata -->
+    <path d="M12 22 C10 18, 8 15, 6 12 C8 10, 12 8, 18 7 C25 6, 32 8, 38 12 C42 15, 45 20, 46 25 C47 30, 46 35, 44 40 C42 45, 40 50, 38 55 C36 58, 34 60, 32 62 C30 64, 28 65, 26 66 C25 67, 24 68, 24 70 C24 72, 25 74, 27 75 C29 76, 32 76, 35 75 C38 74, 40 72, 42 70 C44 68, 45 66, 46 64 C47 62, 48 60, 48 58 C49 56, 49 54, 48 52 C47 48, 45 44, 42 40 C39 36, 35 32, 30 28 C25 24, 20 22, 15 22 C13 22, 12 22, 12 22 Z" 
+          fill="url(#profileGradient)" opacity="0.8"/>
+    
+    <!-- Fascia/diadema -->
+    <path d="M15 20 Q30 18 45 20" stroke="url(#goldGradient)" stroke-width="2" fill="none"/>
+    
+    <!-- Dettagli dei capelli (linee sottili) -->
+    <line x1="20" y1="30" x2="18" y2="35" stroke="#A0855A" stroke-width="0.8"/>
+    <line x1="22" y1="32" x2="20" y2="37" stroke="#A0855A" stroke-width="0.8"/>
+    <line x1="24" y1="35" x2="22" y2="40" stroke="#A0855A" stroke-width="0.8"/>
+    <line x1="26" y1="38" x2="24" y2="43" stroke="#A0855A" stroke-width="0.8"/>
+  </g>
+  
+  <!-- NomeAPHRODITE in tipografia elegante -->
+  <text x="200" y="75" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" 
+        font-size="36" font-weight="300" fill="url(#goldGradient)" 
+        letter-spacing="2">APHRODITE</text>
+  
+  <!-- Linea decorativa sotto il nome -->
+  <line x1="120" y1="85" x2="280" y2="85" stroke="url(#goldGradient)" stroke-width="1"/>
+  
+  <!-- Slogan elegante -->
+  <text x="200" y="105" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" 
+        font-size="14" font-weight="300" fill="#8B7355" 
+        letter-spacing="1">ELEGANZA DIVINA</text>
+  
+  <!-- Elementi decorativi laterali (piccole conchiglie stilizzate) -->
+  <g transform="translate(30, 60)" opacity="0.6">
+    <path d="M0 0 Q5 -3 10 0 Q5 3 0 0" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+    <line x1="3" y1="-1" x2="3" y2="1" stroke="url(#goldGradient)" stroke-width="0.8"/>
+    <line x1="5" y1="-2" x2="5" y2="2" stroke="url(#goldGradient)" stroke-width="0.8"/>
+    <line x1="7" y1="-1" x2="7" y2="1" stroke="url(#goldGradient)" stroke-width="0.8"/>
+  </g>
+  
+  <g transform="translate(360, 60)" opacity="0.6">
+    <path d="M0 0 Q5 -3 10 0 Q5 3 0 0" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+    <line x1="3" y1="-1" x2="3" y2="1" stroke="url(#goldGradient)" stroke-width="0.8"/>
+    <line x1="5" y1="-2" x2="5" y2="2" stroke="url(#goldGradient)" stroke-width="0.8"/>
+    <line x1="7" y1="-1" x2="7" y2="1" stroke="url(#goldGradient)" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Cornice decorativa inferiore -->
+  <path d="M50 95 Q200 115 350 95" stroke="url(#goldGradient)" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+</svg>
