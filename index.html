@@ -1032,6 +1032,9 @@
 
             console.log('🍔 STILE PURO: Loaded successfully! Version: 2025-10-26 21:30:50');
             
+            // Ensure sections are visible on page load
+            showHome();
+            
             // Show confirmation that new code is loaded
             setTimeout(() => {
                 if (document.getElementById('hamburger-menu')) {
