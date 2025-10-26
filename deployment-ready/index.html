@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blonde Salad - Luxury Fashion & Lifestyle Blog</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Il luxury fashion & lifestyle blog di Chiara Ferragni. Scopri le ultime tendenze moda, beauty, lifestyle e stile di vita da The Blonde Salad.">
+    <meta name="keywords" content="Chiara Ferragni, fashion blog, luxury fashion, beauty, lifestyle, moda, style, The Blonde Salad">
+    <meta name="author" content="MiniMax Agent">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="The Blonde Salad - Luxury Fashion & Lifestyle Blog">
+    <meta property="og:description" content="Il luxury fashion & lifestyle blog di Chiara Ferragni. Scopri le ultime tendenze moda, beauty, lifestyle e stile di vita da The Blonde Salad.">
+    <meta property="og:image" content="imgs/elegant_luxury_perfume_bottle_gold_accents.jpg">
+    <meta property="og:url" content="https://stilepuro.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Blonde Salad - Luxury Fashion & Lifestyle Blog">
+    <meta name="twitter:description" content="Il luxury fashion & lifestyle blog di Chiara Ferragni.">
+    <meta name="twitter:image" content="imgs/elegant_luxury_perfume_bottle_gold_accents.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="enhanced-styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading The Blonde Salad...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>The Blonde Salad</h1>
+                    <span class="tagline">Fashion, Beauty & Lifestyle</span>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#fashion" class="nav-link">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#beauty" class="nav-link">Beauty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#lifestyle" class="nav-link">Lifestyle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#people" class="nav-link">People</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Discover the Latest in Fashion & Lifestyle</h2>
+                <p>Curated by Chiara Ferragni, your ultimate destination for luxury fashion, beauty trends, and sophisticated lifestyle content.</p>
+                <a href="#featured" class="cta-button">Explore Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="imgs/fashion_blogger_elegant_lifestyle_woman_stylish_outfits_collage.jpg" alt="Fashion Blogger Collage">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-text">
+                    <span class="category">Fashion</span>
+                    <h2>Autumn/Winter 2025: The Ultimate Accessories Guide</h2>
+                    <p>Discover the must-have accessories for the upcoming season. From luxury handbags to statement jewelry, explore the pieces that will define your style this autumn and winter.</p>
+                    <a href="#posts" class="read-more">Read Full Article</a>
+                </div>
+                <div class="featured-image">
+                    <img src="imgs/luxury_autumn_winter_fashion_accessories_models_coats_bags_hats.jpg" alt="Featured Article">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section" id="posts">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="Fashion">Fashion</button>
+                <button class="filter-btn" data-category="Beauty">Beauty</button>
+                <button class="filter-btn" data-category="Lifestyle">Lifestyle</button>
+                <button class="filter-btn" data-category="People">People</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="posts-section">
+        <div class="container">
+            <div class="posts-grid" id="posts-grid">
+                <!-- Articles will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Stay in Style</h3>
+                <p>Subscribe to The Blonde Salad newsletter for the latest fashion trends, beauty tips, and lifestyle inspiration delivered straight to your inbox.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>The Blonde Salad</h4>
+                    <p>Your ultimate destination for luxury fashion, beauty, and lifestyle inspiration.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#fashion">Fashion</a></li>
+                        <li><a href="#beauty">Beauty</a></li>
+                        <li><a href="#lifestyle">Lifestyle</a></li>
+                        <li><a href="#people">People</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Blonde Salad. Created by MiniMax Agent. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="script-enhanced.js"></script>
+</body>
+</html>
