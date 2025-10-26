@@ -234,6 +234,9 @@
             overflow: hidden;
             box-shadow: 0 10px 30px var(--shadow);
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
         
         .post-card:hover {
@@ -589,6 +592,73 @@
             }
         }
         
+        /* Article Page */
+        .article-page {
+            display: none;
+            padding-top: 70px;
+        }
+        
+        .article-page.active {
+            display: block;
+        }
+        
+        .article-hero {
+            height: 60vh;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+        
+        .article-hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            max-width: 800px;
+            padding: 0 20px;
+            line-height: 1.2;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-meta {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .article-text {
+            margin-bottom: 2rem;
+        }
+        
+        .article-back {
+            display: inline-block;
+            margin: 3rem 0;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .article-back:hover {
+            background: var(--dark-gold);
+            transform: translateX(-5px);
+        }
+        
         /* Loading Animation */
         .fade-in {
             opacity: 0;
@@ -657,7 +727,7 @@
         <div class="container">
             <h2 class="section-title">Fashion & Trends</h2>
             <div class="posts-grid">
-                <div class="post-card fade-in">
+                <a href="#article/1" class="post-card fade-in" data-article-id="1">
                     <div class="post-image">Profumi di Lusso 2025</div>
                     <div class="post-content">
                         <span class="post-category">Ready-to-Wear</span>
@@ -665,9 +735,9 @@
                         <p>Scopri le Essenze più Raffinate che Stanno Conquistando le Passeges di Milano e le Boutique di Tutto il Mondo</p>
                         <div class="post-meta">25 Ottobre 2025 • by Stile Puro Team</div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="post-card fade-in">
+                <a href="#article/2" class="post-card fade-in" data-article-id="2">
                     <div class="post-image">Lupita Nyong'o Red Carpet</div>
                     <div class="post-content">
                         <span class="post-category">Red Carpet</span>
@@ -675,9 +745,9 @@
                         <p>L'Interprete di "Black Panther" Incanta con un Look da Red Carpet Indimenticabile che Definisce il Nuovo Standard dell'Eleganza</p>
                         <div class="post-meta">24 Ottobre 2025 • by Stile Puro Team</div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="post-card fade-in">
+                <a href="#article/3" class="post-card fade-in" data-article-id="3">
                     <div class="post-image">Street Style Milano</div>
                     <div class="post-content">
                         <span class="post-category">Street Style</span>
@@ -685,9 +755,9 @@
                         <p>I Segreti per Creare Look Raffinati per Ogni Occasione della Vita Moderna, Ispirati alle Strade di Milano</p>
                         <div class="post-meta">23 Ottobre 2025 • by Stile Puro Team</div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="post-card fade-in">
+                <a href="#article/4" class="post-card fade-in" data-article-id="4">
                     <div class="post-image">Occhiali da Sole Luxury</div>
                     <div class="post-content">
                         <span class="post-category">Accessori</span>
@@ -695,9 +765,9 @@
                         <p>I Modelli più Raffinati per Proteggere lo Sguardo con Eleganza Inconfondibile e Distinguersi in Ogni Occasione</p>
                         <div class="post-meta">22 Ottobre 2025 • by Stile Puro Team</div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="post-card fade-in">
+                <a href="#article/5" class="post-card fade-in" data-article-id="5">
                     <div class="post-image">Abito di Seta Rossa</div>
                     <div class="post-content">
                         <span class="post-category">Ready-to-Wear</span>
@@ -705,9 +775,9 @@
                         <p>Come Indossare l'Abito Rosso per Ogni Occasione con Raffinatezza e Personalità, Ispirandosi ai Grandi Stilisti</p>
                         <div class="post-meta">21 Ottobre 2025 • by Stile Puro Team</div>
                     </div>
-                </div>
+                </a>
                 
-                <div class="post-card fade-in">
+                <a href="#article/6" class="post-card fade-in" data-article-id="6">
                     <div class="post-image">Tendenza Prugna Autunnale</div>
                     <div class="post-content">
                         <span class="post-category">Street Style</span>
@@ -715,7 +785,7 @@
                         <p>Come Stylizzare il Colore Prugna nei Tuoi Outfit Quotidiani con Eleganza e Creatività, La Nuova Collezione</p>
                         <div class="post-meta">20 Ottobre 2025 • by Stile Puro Team</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -929,10 +999,231 @@
                 if (document.getElementById('hamburger-menu')) {
                     console.log('✅ Hamburger menu element found in DOM');
                     console.log('✅ Menu ready for testing on mobile devices');
+                    console.log('✅ Article system ready - click on any article to test!');
                 } else {
                     console.error('❌ Hamburger menu element NOT found');
                 }
             }, 1000);
+
+            // Article Navigation System
+            const sections = document.querySelectorAll('.hero, .section, .about, .newsletter, footer');
+            
+            // Create article page container
+            const articleContainer = document.createElement('div');
+            articleContainer.className = 'article-page';
+            articleContainer.id = 'article-page';
+            document.body.insertBefore(articleContainer, document.body.firstChild);
+            
+            // Article content database
+            const articles = {
+                1: {
+                    title: "Profumi di Lusso: I Nuovi Must-Have del 2025",
+                    category: "Ready-to-Wear",
+                    date: "25 Ottobre 2025",
+                    author: "Stile Puro Team",
+                    content: `
+                        <p>Il 2025 si apre con una rivoluzione nel mondo della profumeria di lusso. Le più esclusive Maison cosmopolite stanno ridefinendo il concetto stesso di essenza, creando profumi che non sono semplicemente fragrance, ma veri e propri atti di ribellione olfattiva.</p>
+                        
+                        <p>Nelle passeges di Milano, tra le boutique più esclusive di Via Montenapoleone, stanno emergendo le creazioni più innovative di quest'anno. I master perfumers stanno sperimentando con note mai sentite prima: dalla resina di Boswellia Sacra del Madagascar alle essenze floreali rare della Siberia, ogni componente è scelto per la sua unicità e la sua capacità di trasportare chi indossa in un viaggio sensoriale senza confini.</p>
+                        
+                        <div class="article-text">
+                            <h3>Le Novità più Attese</h3>
+                            <p>Tra le creazioni più innovative troviamo "Eclipse Noir" di Maison Rouge, un profumo che cattura l'essenza dell'eclissi stellare in una bottiglia dorata. Le sue note di testa includono bergamotto nero e pepe rosa, evolvendo in un cuore di rosa damascena e oud alle spezie, per chiudere con un fondo di vaniglia bourbon e legni preziosi.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>L'Arte della Personalizzazione</h3>
+                            <p>La vera rivoluzione di quest'anno è la possibilità di personalizzare ogni fragranza. Le clienti più esigenti possono ora creare il proprio profumo su misura, scegliendo tra centinaia di essenze rare e lavorando con i migliori profumieri del mondo per sviluppare una fragranza unica e irripetibile.</p>
+                        </div>
+                        
+                        <p>Questa nuova era della profumeria di lusso rappresenta il futuro dell'eleganza italiana: raffinatezza senza compromessi, innovazione senza perdere la tradizione, e soprattutto, la capacità di ogni donna di esprimere la propria personalità attraverso un profumo che parla la sua lingua più intima.</p>
+                    `
+                },
+                2: {
+                    title: "Lupita Nyong'o: Eleganza Assoluta agli Awards",
+                    category: "Red Carpet",
+                    date: "24 Ottobre 2025",
+                    author: "Stile Puro Team",
+                    content: `
+                        <p>Lupita Nyong'o ha incantato ancora una volta il mondo degli Awards con un look che definisce il nuovo standard dell'eleganza da red carpet. La talentuosa interprete di "Black Panther" ha scelto un abito straordinario che combina l'arte sartoriale contemporanea con un'eleganza senza tempo.</p>
+                        
+                        <p>L'abito, firmato da una delle maison parigine più esclusive, è un capolavoro di sartoria contemporanea. Il tessuto, una seta crema con disegni delicati ricamati a mano, racconta una storia di bellezza e raffinatezza che va oltre la moda per diventare arte pura. I cristalli Swarovski che ornano ogni dettaglio creano un gioco di luci che cattura l'attenzione senza mai essere eccessivo.</p>
+                        
+                        <div class="article-text">
+                            <h3>Il Potere dell'Eleganza</h3>
+                            <p>Ciò che rende questo look indimenticabile non è solo l'abito, ma la grazia naturale con cui Lupita lo porta. Ogni movimento, ogni gesto, ogni sguardo trasmette una sicurezza e una bellezza che parlano a ogni donna: l'eleganza vera non è solo quello che indossi, ma come lo indossi.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>L'Ispirazione per l'Autunno</h3>
+                            <p>Questo look rappresenta l'ispirazione perfetta per l'autunno 2025: eleganza raffinata, comfort senza sacrificare lo stile, e soprattutto, la capacità di sentirsi a proprio agio nella propria pelle. Le linee pulite e il tessuto di qualità sono gli elementi chiave per replicare questo stile nella vita quotidiana.</p>
+                        </div>
+                        
+                        <p>Lupita Nyong'o continua a dimostrare che l'eleganza non conosce confini di etnia o di stile. Il suo look di questa sera sarà ricordato come uno dei momenti più belli dell'anno, ispirando migliaia di donne a riscoprire la propria bellezza attraverso l'arte del vestirsi con stile e personalità.</p>
+                    `
+                },
+                3: {
+                    title: "Street Style: L'Arte di Vestirsi con Eleganza Quotidiana",
+                    category: "Street Style",
+                    date: "23 Ottobre 2025",
+                    author: "Stile Puro Team",
+                    content: `
+                        <p>Le strade di Milano si trasformano ogni giorno in una passerella naturale, dove le donne più eleganti della città dimostrano che l'arte di vestirsi con stile non è privilegio delle occasioni speciali, ma un modo di vivere quotidiano.</p>
+                        
+                        <p>Il nuovo street style milanese per l'autunno 2025 si ispira a una filosofia semplice ma rivoluzionaria: comfort, eleganza e personalità devono coesistere in perfetto equilibrio. Nelle vie più esclusive, dalle Cinque Giornate a Corso Venezia, si possono ammirare look che trasformano l'ordinario in straordinario.</p>
+                        
+                        <div class="article-text">
+                            <h3>I Segreti delle Milano Ladies</h3>
+                            <p>Le donne più eleganti di Milano hanno perfezionato l'arte di combinare pezzi di qualità: un cappotto in cachemire beige, una borsa in pelle di vitello martellata, scarpe comode ma raffinate, e sempre quel tocco di colore che illumina il look senza mai essere eccessivo.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>L'Essenza dell'Eleganza Moderne</h3>
+                            <p>Questa nuova corrente di eleganza quotidiana insegna che non serve essere perfette per essere eleganti. L'importante è scegliere con cura ogni pezzo, prediligere tessuti di qualità, e soprattutto, sentirsi a proprio agio con quello che si indossa. L'eleganza autentica nasce dalla sicurezza in se stesse.</p>
+                        </div>
+                        
+                        <p>Lo street style milanese dell'autunno 2025 ci insegna che l'eleganza è un linguaggio universale, capace di parlare al cuore di ogni donna che sceglie di esprimere se stessa attraverso il proprio stile, con la consapevolezza che la vera bellezza viene dall'interno e si riflette armoniosamente nell'esterno.</p>
+                    `
+                },
+                4: {
+                    title: "Occhiali da Sole Luxury: Protezione e Stile",
+                    category: "Accessori",
+                    date: "22 Ottobre 2025",
+                    author: "Stile Puro Team",
+                    content: `
+                        <p>La protezione dello sguardo non deve mai sacrificare l'eleganza. Per l'autunno-inverno 2025, i brand di lusso stanno ridefinendo il concetto di occhiali da sole, trasformandoli da semplici protezioni solari a veri e propri gioielli funzionali.</p>
+                        
+                        <p>Nelle boutique più esclusive di Milano, negli showroom di Parigi e negli atelier di Milano, stanno nascendo creazioni uniche che uniscono artigianalità e tecnologia all'avanguardia. Ogni montatura è un'opera d'arte, ogni lente una porta verso un mondo più luminoso e protegido.</p>
+                        
+                        <div class="article-text">
+                            <h3>L'Arte della manifattura</h3>
+                            <p>I maestri occhialaì italiani stanno utilizzando materiali mai visti prima: acetato di cellulosa derivato da fonti sostenibili, lenti in cristallo con trattamenti fotocromatici invisibili, e montature in titanio decorate con tecniche di smaltatura a mano che ricordano i gioielli di epoca vittoriana.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>Proteggere con Eleganza</h3>
+                            <p>La vera innovazione di quest'anno è la capacità di creare occhiali che proteggono gli occhi dai raggi UV dannosi senza compromettere lo stile. Le lenti polarizzate sono ora disponibili in sfumature di colore naturali che si adattano perfettamente a ogni tonalità di pelle, esaltando la bellezza naturale di chi li indossa.</p>
+                        </div>
+                        
+                        <p>Gli occhiali da sole luxury dell'autunno 2025 rappresentano il futuro della protezione solare elegante: tecnologia all'avanguardia racchiusa in design senza tempo, per proteggere la bellezza del proprio sguardo con la raffinatezza che solo l'artigianalità italiana sa offrire.</p>
+                    `
+                },
+                5: {
+                    title: "Il Potere del Rosso: L'Eleganza della Seta",
+                    category: "Ready-to-Wear",
+                    date: "21 Ottobre 2025",
+                    author: "Stile Puro Team",
+                    content: `
+                        <p>Il rosso non è solo un colore, è un'emozione. La seta rossa, in particolare, ha il potere di trasformare ogni donna in un'opera d'arte vivente, capace di comunicare passione, forza e eleganza in un solo gesto.</p>
+                        
+                        <p>Per la stagione autunnale 2025, i grandi stilisti stanno rivisitando il classico abito di seta rossa con tagli contemporanei che esaltano la figura femminile senza mai essere aggressivi. Dalle passerelle di Milano ai salotti più esclusivi, questo tessuto prezioso torna a conquistare il guardarobo delle donne eleganti.</p>
+                        
+                        <div class="article-text">
+                            <h3>L'Arte della Seta</h3>
+                            <p>La seta rossa di quest'autunno è speciale: deriva da bachi di seta nutrite con foglie di gelso rosso, risultando in filati più brillanti e resistenti. Il processo di tintura utilizza pigmenti naturali che creano sfumature uniche, da rosso rubino a rosso carminio, capaci di cambiare colore a seconda della luce.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>Eleganza per Ogni Occasione</h3>
+                            <p>L'abito di seta rossa non è più solo per le occasioni speciali. I nuovi tagli, più casual ma sempre raffinati, lo rendono perfetto per il lavoro come per l'aperitivo. La chiave è saperlo indossare con personalità: con sneakers eleganti per un look day, con sandali dorati per la sera.</p>
+                        </div>
+                        
+                        <p>Indossare un abito di seta rossa significa scegliere di essere viste, ma non per catturare l'attenzione, bensì per esprimere la propria personalità più autentica. È un gesto di coraggio e di amore per se stesse che ogni donna merita di fare, soprattutto in un'autunno che ci ricorda quanto sia prezioso vivere con stile e passione.</p>
+                    `
+                },
+                6: {
+                    title: "Purple Reign: Tendenza Prugna per l'Autunno",
+                    category: "Street Style",
+                    date: "20 Ottobre 2025",
+                    author: "Stile Puro Team",
+                    content: `
+                        <p>Il colore protagonista dell'autunno 2025 è un prugna sofisticato, capace di comunicare eleganza, mistero e personalità in un'unica sfumatura. Dalle passerelle di Milano alle strade di Parigi, questa tonalità sta conquistando il guardarobo delle donne più moderne e raffinate.</p>
+                        
+                        <p>La nuova collezione autunnale dedica un'attenzione particolare al prugna: dalla maglieria in cachemire agli abiti da cocktail, dalle scarpe in camoscio alle borse in pelle martellata. Questo colore ha il potere magico di valorizzare ogni tipo di pelle, esaltando la bellezza naturale di chi lo indossa.</p>
+                        
+                        <div class="article-text">
+                            <h3>Come Stylizzare il Prugna</h3>
+                            <p>Il segreto per indossare il prugna con eleganza è la combinazione dei toni. Funziona alla perfezione con beige, avorio, e naturalmente con il nero classico. Per un look da giorno, abbinatelo a camicie bianche e pantaloni in flanella grigia; per la sera, create contrasti audaci con oro giallo e dettagli in cristallo.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>Il Prugna nella Vita Quotidiana</h3>
+                            <p>Non deve essere intimidatorio: un maglione prugna in cachemire, dei jeans neri e scarpe comode creano un look perfettamente bilanciato tra eleganza e comfort. O una giacca prugna con jeans blu e ballerine può trasformare un outfit casual in qualcosa di speciale senza sforzi eccessivi.</p>
+                        </div>
+                        
+                        <p>Il prugna dell'autunno 2025 non è solo una tendenza, è un modo di essere: coraggiosa ma raffinata, moderna ma senza tempo, versatile ma sempre elegante. È il colore che ogni donna dovrebbe avere nel proprio guardarobo per sentirsi sicura e bella in ogni occasione.</p>
+                    `
+                }
+            };
+            
+            function showArticle(articleId) {
+                const article = articles[articleId];
+                if (!article) return;
+                
+                // Hide main sections
+                sections.forEach(section => section.style.display = 'none');
+                document.querySelector('header').style.display = 'none';
+                
+                // Show article page
+                articleContainer.classList.add('active');
+                
+                // Create article HTML
+                articleContainer.innerHTML = `
+                    <div class="article-hero">
+                        <h1>${article.title}</h1>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">${article.category} • ${article.date} • by ${article.author}</div>
+                        <div class="article-body">
+                            ${article.content}
+                        </div>
+                        <a href="#fashion" class="article-back">← Torna agli Articoli</a>
+                    </div>
+                `;
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                console.log(`📰 Opening article: ${article.title}`);
+            }
+            
+            function showHome() {
+                // Show main sections
+                sections.forEach(section => section.style.display = '');
+                document.querySelector('header').style.display = '';
+                
+                // Hide article page
+                articleContainer.classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                console.log('🏠 Returning to homepage');
+            }
+            
+            // Handle article navigation
+            document.addEventListener('click', (e) => {
+                if (e.target.closest('a[href^="#article/"]')) {
+                    e.preventDefault();
+                    const articleId = e.target.closest('a').getAttribute('href').split('/')[1];
+                    showArticle(articleId);
+                }
+                
+                if (e.target.matches('a[href="#fashion"]') || e.target.closest('a[href="#fashion"]')) {
+                    showHome();
+                }
+            });
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', () => {
+                const hash = window.location.hash;
+                if (hash.startsWith('#article/')) {
+                    const articleId = hash.split('/')[1];
+                    showArticle(articleId);
+                } else {
+                    showHome();
+                }
+            });
         });
     </script>
 </body>
