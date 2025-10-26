@@ -415,4 +415,90 @@
     .newsletter {
         display: none;
     }
+}/* Additional Animations for The Blonde Salad */
+
+/* Scroll animations */
+.article-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.article-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.featured-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.featured-content.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.newsletter-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.newsletter-content.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Article image overlay styles */
+.article-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.article-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(192, 160, 98, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.article-card:hover .article-overlay {
+    opacity: 1;
+}
+
+.read-article-btn {
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: var(--gold);
+}
+
+.read-article-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Loading screen enhancements */
+.loading-screen {
+    background: linear-gradient(135deg, var(--page-bg) 0%, #f8f8f8 100%);
+}
+
+/* Menu open body style */
+body.menu-open {
+    overflow: hidden;
 }

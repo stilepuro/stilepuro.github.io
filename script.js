@@ -8,7 +8,7 @@ const articlesData = [
         title: "Accessori Autunno/Inverno 2025: i must-have da avere subito nel guardaroba",
         category: "Fashion",
         date: "25/09/2025",
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+        image: "imgs/luxury_autumn_winter_fashion_accessories_models_coats_bags_hats.jpg",
         excerpt: "Le tendenze accessori per la stagione fredda che segneranno il guardaroba del 2025."
     },
     {
@@ -16,7 +16,7 @@ const articlesData = [
         title: "Balenciaga: il ritorno nel mondo dei profumi con una collezione di dieci fragranze",
         category: "Beauty",
         date: "11/09/2025",
-        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&h=600&fit=crop",
+        image: "imgs/elegant_luxury_perfume_bottle_gold_accents.jpg",
         excerpt: "La maison di lusso svela una nuova linea di profumi che promette di rivoluzionare il mercato."
     },
     {
@@ -24,7 +24,7 @@ const articlesData = [
         title: "Tutto su Il Diavolo Veste Prada 2: cast, trama e le prime immagini dal set a New York",
         category: "Lifestyle",
         date: "30/07/2025",
-        image: "https://images.unsplash.com/photo-1496449903678-68ddcb189a24?w=800&h=600&fit=crop",
+        image: "imgs/fashion_blogger_elegant_woman_floral_dress_street_style.jpg",
         excerpt: "Il sequel del cult movie si avvicina: tutte le novità dal set newyorkese."
     },
     {
@@ -32,7 +32,7 @@ const articlesData = [
         title: "Gilmore Girls, reunion emozionante agli Emmy 2025: Lauren Graham e Alexis Bledel di nuovo insieme",
         category: "Lifestyle",
         date: "15/09/2025",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+        image: "imgs/taylor-swift-grammys-red-carpet-glamour-white-dress.jpg",
         excerpt: "Il tanto atteso ricongiungimento delle star della serie cult agli Emmy Awards."
     },
     {
@@ -40,7 +40,7 @@ const articlesData = [
         title: "La Maison Louis Vuitton Lancia la Sua Prima Linea di Make-up con Pat McGrath alla Direzione Creativa",
         category: "Beauty",
         date: "05/03/2025",
-        image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop",
+        image: "imgs/elegant_luxury_perfume_bottle_turquoise_gems.jpg",
         excerpt: "La collaborazione tra Louis Vuitton e la guru del makeup Pat McGrath svela i primi prodotti."
     },
     {
@@ -48,7 +48,7 @@ const articlesData = [
         title: "Victoria Beckham: il ritratto intimo di una donna che ha scelto di reinventarsi",
         category: "Fashion",
         date: "11/09/2025",
-        image: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&h=600&fit=crop",
+        image: "imgs/elegant_fashion_blogger_camel_coat_city_lifestyle.jpg",
         excerpt: "Il percorso della stilista da Spice Girl a icona della moda internazionale."
     },
     {
@@ -56,7 +56,7 @@ const articlesData = [
         title: "Tutti i look iconici di Beyoncé nel Cowboy Carter Tour",
         category: "Fashion",
         date: "09/07/2025",
-        image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop",
+        image: "imgs/celebrities_red_carpet_glamour_fashion_gowns_blanchett_chastain_hayek.jpg",
         excerpt: "I costumi più spettacolari e trasformativi della superstar nel suo ultimo tour."
     },
     {
@@ -64,7 +64,7 @@ const articlesData = [
         title: "Moda Estate 2025: il ritorno degli abiti lunghi boho-chic (secondo Bella Hadid)",
         category: "Fashion",
         date: "30/07/2025",
-        image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&h=600&fit=crop",
+        image: "imgs/fashion_blogger_elegant_lifestyle_woman_stylish_outfits_collage.jpg",
         excerpt: "Le tendenze estive viste attraverso lo stile della modella più influente del momento."
     },
     {
@@ -72,7 +72,7 @@ const articlesData = [
         title: "Prime Video 2025: Tra Amore, Risate e Glamour – Tutti i Nuovi Film e Serie",
         category: "Lifestyle",
         date: "11/07/2025",
-        image: "https://images.unsplash.com/photo-1489599433112-43b96ad13f4e?w=800&h=600&fit=crop",
+        image: "imgs/zoe_kravitz_red_carpet_glamour_black_dress_batman_premiere.jpg",
         excerpt: "Le produzioni più attese della piattaforma streaming per l'anno 2025."
     },
     {
@@ -80,7 +80,7 @@ const articlesData = [
         title: "Schiaparelli Haute Couture A/I 2025: l'audacia che incanta Parigi",
         category: "Fashion",
         date: "07/07/2025",
-        image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop",
+        image: "imgs/haute_couture_fashion_show_runway_model_golden_dress_art_background.jpg",
         excerpt: "La sfilata più discussa e innovativa della Haute Couture parigina."
     },
     {
@@ -88,7 +88,7 @@ const articlesData = [
         title: "Cher & Dionne diventano Barbie per i 30 anni di Clueless",
         category: "Lifestyle",
         date: "11/07/2025",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+        image: "imgs/Lupita_Nyongo_Glamorous_Red_Carpet_Awards_Fashion.jpg",
         excerpt: "Celebrando tre decenni del film cult con una speciale collaborazione Mattel."
     },
     {
@@ -96,7 +96,7 @@ const articlesData = [
         title: "Record a Parigi: la Birkin di Jane Birkin venduta per oltre 8 milioni",
         category: "Fashion",
         date: "11/07/2025",
-        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=600&fit=crop",
+        image: "imgs/luxury_fashion_accessories_autumn_winter_2025_runway_handbags_trends.jpg",
         excerpt: "L'asta record per la borsa più iconica della storia della moda."
     }
 ];

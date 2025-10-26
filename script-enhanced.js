@@ -315,14 +315,14 @@ function generateMoreArticles(page, limit) {
             title: "Trend Make-up Autunno 2025: i colori che conquisteranno",
             category: "Beauty",
             date: "20/10/2025",
-            image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&h=600&fit=crop",
+            image: "imgs/elegant_luxury_perfume_bottles_beauty_product.jpg",
             excerpt: "Le tonalità più cool per la stagione autunnale."
         },
         {
             title: "Milano Fashion Week: i look più iconici delle star",
             category: "Fashion",
             date: "18/10/2025",
-            image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop",
+            image: "imgs/haute_couture_fashion_show_elegant_models_runway.jpg",
             excerpt: "Le celebrities più trendy durante la fashion week milanese."
         }
     ];
