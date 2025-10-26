@@ -10,7 +10,7 @@
     <meta http-equiv="Expires" content="0">
     
     <!-- ALL CSS INLINE - NO EXTERNAL FILES -->
-    <!-- Version: 20251026212859 -->
+    <!-- Version: 20251026213050 -->
     <style>
         * {
             margin: 0;
@@ -74,6 +74,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             letter-spacing: 0.5px;
+        }
+        
+        /* Logo Image */
+        .logo img {
+            height: 40px;
+            width: auto;
         }
         
         .nav-links {
@@ -537,6 +543,11 @@
             background-clip: text;
         }
         
+        .mobile-logo img {
+            height: 32px;
+            width: auto;
+        }
+        
         .close-menu {
             background: none;
             border: none;
@@ -682,7 +693,9 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Stile Puro</div>
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMzAwIDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJlbGVnYW50R29sZCIgeDE9IjAlIiB5MT0iMCUiIHgxPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNDMEEwNjIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNCODk2NUEiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQTY4NzRFQiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPC9nPgogIDx0ZXh0IHg9IjE1MCIgeT0iNDUiCiAgICAgIGZvbnQtZmFtaWx5PSInR2VvcmdpYScsICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJpZiIKICAgICAgZm9udC1zaXplPSIzMiIKICAgICAgZm9udC13ZWlnaHQ9IjMwMCIKICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIKICAgICAgZmlsbD0idXJsKCNlbGVnYW50R29sZCkiCiAgICAgIGxldHRlci1zcGFjaW5nPSIyJCI+U1RJTEUgUFVSQjwvdGV4dD4KPC9zdmc+" alt="Stile Puro Logo">
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#fashion">Fashion</a></li>
@@ -704,7 +717,9 @@
     <!-- Mobile Menu Panel -->
     <div class="mobile-menu-panel" id="mobile-panel">
         <div class="mobile-menu-header">
-            <div class="mobile-logo">Stile Puro</div>
+            <div class="mobile-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjU0IiB2aWV3Qm94PSIwIDAgMjAwIDU0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJtb2JpbGVHb2xkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0MwQTA2MiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI0I4OTY1QSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNBNjg3NEVCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8dGV4dCB4PSIxMDAiIHk9IjMyIgogICAgIGZvbnQtZmFtaWx5PSInR2VvcmdpYScsICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJpZiIKICAgICBmb250LXNpemU9IjI0IgogICAgIGZvbnQtd2VpZ2h0PSIzMDAiCiAgICAgIHRleHQtYW5jaG9yPSJtaWRkbGUiCiAgICAgIGZpbGw9InVybCgjbW9iaWxlR29sZCkiCiAgICAgIGxldHRlci1zcGFjaW5nPSIyJSI+U1RJTEUgUFVSQjwvdGV4dD4KPC9zdmc+" alt="Stile Puro">
+            </div>
             <button class="close-menu" id="close-menu">×</button>
         </div>
         <ul class="mobile-nav-links">
@@ -1014,7 +1029,7 @@
                 e.stopPropagation();
             });
 
-            console.log('🍔 STILE PURO: Loaded successfully! Version: 2025-10-26 21:28:59');
+            console.log('🍔 STILE PURO: Loaded successfully! Version: 2025-10-26 21:30:50');
             
             // Show confirmation that new code is loaded
             setTimeout(() => {

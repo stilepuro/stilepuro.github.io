@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente oro sofisticato -->
+    <linearGradient id="elegantGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C0A062"/>
+      <stop offset="50%" stop-color="#B8965A"/>
+      <stop offset="100%" stop-color="#A6874E"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo principale -->
+  <g transform="translate(150, 40)">
+    <!-- STILE PURO -->
+    <text x="0" y="5" 
+          font-family="'Georgia', 'Times New Roman', serif" 
+          font-size="32" 
+          font-weight="300" 
+          text-anchor="middle" 
+          fill="url(#elegantGold)" 
+          letter-spacing="2px">STILE PURO</text>
+  </g>
+</svg>

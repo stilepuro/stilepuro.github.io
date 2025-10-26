@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente oro elegante -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C0A062"/>
+      <stop offset="50%" stop-color="#B8965A"/>
+      <stop offset="100%" stop-color="#A6874E"/>
+    </linearGradient>
+    
+    <!-- Ombra sottile -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.1)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background trasparente -->
+  <rect width="400" height="120" fill="transparent"/>
+  
+  <!-- Container principale -->
+  <g transform="translate(200, 60)" filter="url(#softShadow)">
+    
+    <!-- Lettera S - stilizzata e moderna -->
+    <path d="M -50 -25 Q -45 -35 -35 -35 L -10 -35 Q 0 -35 0 -25 L 0 -10 Q 0 0 -10 0 L -35 0 Q -45 0 -50 -10 Q -45 5 -35 15 L 10 35 Q 15 35 25 35 L 50 35 Q 60 35 60 25 L 60 10 Q 60 0 50 0 L 25 0 Q 15 0 15 -10 L 15 -25 Q 15 -35 25 -35 L 50 -35 Q 60 -35 65 -25 Q 75 -15 75 0 Q 75 15 65 25 Q 55 35 35 35 Q 15 35 5 25 Q 0 20 0 10 L 0 -10 Q 0 -20 5 -25 Q 15 -35 35 -35 Q 55 -35 75 -20"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio tra lettere -->
+    <rect x="0" y="-40" width="20" height="80" fill="transparent"/>
+    
+    <!-- Lettera T - moderna e pulita -->
+    <path d="M 0 -35 L 80 -35 L 80 -20 L 15 -20 L 15 35 Q 15 45 5 45 L -5 45 Q -15 45 -15 35 L -15 -20 L -80 -20 L -80 -35 L 0 -35"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio tra lettere -->
+    <rect x="85" y="-40" width="15" height="80" fill="transparent"/>
+    
+    <!-- Lettera I - semplice ed elegante -->
+    <path d="M 0 -35 L 60 -35 L 60 -20 L 15 -20 L 15 35 Q 15 45 5 45 L -5 45 Q -15 45 -15 35 L -15 -20 L -60 -20 L -60 -35 L 0 -35"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio tra lettere -->
+    <rect x="105" y="-40" width="15" height="80" fill="transparent"/>
+    
+    <!-- Lettera L - classica -->
+    <path d="M 0 -35 L 0 35 Q 0 45 10 45 L 40 45 Q 50 45 50 35 L 50 10 L 65 10 L 65 -35 L 0 -35"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio tra parole -->
+    <rect x="165" y="-40" width="35" height="80" fill="transparent"/>
+    
+    <!-- Lettera P - elegante -->
+    <path d="M 0 -35 L 0 35 Q 0 45 10 45 L 40 45 Q 50 45 50 35 L 50 20 Q 50 10 40 10 L 10 10 L 10 -25 Q 10 -35 0 -35"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio -->
+    <rect x="200" y="-40" width="20" height="80" fill="transparent"/>
+    
+    <!-- Lettera U - fluida -->
+    <path d="M 0 -25 Q 0 -35 10 -35 L 30 -35 Q 40 -35 40 -25 L 40 5 Q 40 35 15 35 Q 0 35 0 35 Q -20 35 -30 5 L -30 -25 Q -30 -35 -20 -35 L 0 -35"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio -->
+    <rect x="230" y="-40" width="20" height="80" fill="transparent"/>
+    
+    <!-- Lettera R - forte e moderna -->
+    <path d="M 0 -35 L 0 35 Q 0 45 10 45 L 40 45 Q 50 45 50 35 L 50 25 Q 50 15 40 15 L 10 15 L 10 0 Q 20 -5 35 0 L 50 10 L 50 35 Q 50 45 60 45 L 70 45 Q 80 45 80 35 L 80 0 L 95 0 L 95 -35 L 0 -35"
+          fill="url(#goldGradient)" 
+          stroke="none"
+          stroke-width="0"/>
+    
+    <!-- Spazio -->
+    <rect x="300" y="-40" width="15" height="80" fill="transparent"/>
+    
+    <!-- Lettera O - perfetta -->
+    <circle cx="330" cy="0" r="25" fill="none" stroke="url(#goldGradient)" stroke-width="15"/>
+  </g>
+  
+  <!-- Sottotitolo elegante -->
+  <g transform="translate(200, 110)">
+    <text x="0" y="0" 
+          font-family="'Georgia', serif" 
+          font-size="12" 
+          text-anchor="middle" 
+          fill="#666666" 
+          letter-spacing="3px">FASHION • LIFESTYLE • ELEGANCE</text>
+  </g>
+</svg>
