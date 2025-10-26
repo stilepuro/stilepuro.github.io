@@ -10,7 +10,7 @@
     <meta http-equiv="Expires" content="0">
     
     <!-- ALL CSS INLINE - NO EXTERNAL FILES -->
-    <!-- Version: 20251026204101 -->
+    <!-- Version: 20251026212859 -->
     <style>
         * {
             margin: 0;
@@ -195,6 +195,11 @@
         .btn-secondary:hover {
             background: var(--white);
             color: var(--black);
+        }
+        
+        /* Hero Section - DISABLED per richiesta utente */
+        .hero {
+            display: none;
         }
         
         /* Sections */
@@ -892,6 +897,21 @@
                 });
             });
 
+            // Handle "Home" menu link - redirect to Fashion section
+            document.querySelectorAll('a[href="#home"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const fashionSection = document.getElementById('fashion');
+                    if (fashionSection) {
+                        const offsetTop = fashionSection.offsetTop - 70;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
             // Newsletter form submission
             document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -994,7 +1014,7 @@
                 e.stopPropagation();
             });
 
-            console.log('🍔 STILE PURO: Loaded successfully! Version: 2025-10-26 20:41:01');
+            console.log('🍔 STILE PURO: Loaded successfully! Version: 2025-10-26 21:28:59');
             
             // Show confirmation that new code is loaded
             setTimeout(() => {
