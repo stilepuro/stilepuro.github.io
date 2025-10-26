@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Blonde Salad - Moda, Lifestyle e Eleganza</title>
     <meta name="description" content="Il blog di lifestyle e moda più seguto al mondo. Scopri le ultime tendenze fashion, beauty e lifestyle da Milano con The Blonde Salad.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     
     <!-- ALL CSS INLINE - NO EXTERNAL FILES -->
+    <!-- Version: 20251026203014 -->
     <style>
         * {
             margin: 0;
@@ -918,7 +922,17 @@
                 e.stopPropagation();
             });
 
-            console.log('The Blonde Salad website loaded successfully!');
+            console.log('🍔 HAMBURGER MENU: Loaded successfully! Version: 2025-10-26 20:30:14');
+            
+            // Show confirmation that new code is loaded
+            setTimeout(() => {
+                if (document.getElementById('hamburger-menu')) {
+                    console.log('✅ Hamburger menu element found in DOM');
+                    console.log('✅ Menu ready for testing on mobile devices');
+                } else {
+                    console.error('❌ Hamburger menu element NOT found');
+                }
+            }, 1000);
         });
     </script>
 </body>
