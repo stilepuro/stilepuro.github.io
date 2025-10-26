@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aphrodite - Eleganza Divina e Bellezza Eternale</title>
+    <meta name="description" content="Il universo della bellezza e dell'eleganza. Scopri i segreti di Aphrodite per uno stile di vita raffinato, moda timeless e bellezza senza tempo.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- ALL CSS INLINE - NO EXTERNAL FILES -->
+    <!-- Version: 20251026215346 - Rebrand to Aphrodite -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8952E;
+            --light-gold: #F4E4BC;
+            --black: #2C1810;
+            --white: #FFFFFF;
+            --light-gray: #FAF9F7;
+            --medium-gray: #8B7355;
+            --dark-gray: #5D4E37;
+            --shadow: rgba(212, 175, 55, 0.15);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(192, 160, 98, 0.2);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Logo Image */
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(192,160,98,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(192, 160, 98, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0 10px;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+        
+        /* Hero Section - DISABLED per richiesta utente */
+        .hero {
+            display: none;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        /* Posts Grid */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .post-card {
+            background: var(--white);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, var(--gold), var(--dark-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .post-content {
+            padding: 1.5rem;
+        }
+        
+        .post-category {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .post-content h3 {
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .post-content p {
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+        }
+        
+        .post-meta {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            border-top: 1px solid rgba(192, 160, 98, 0.2);
+            padding-top: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--light-gray);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat h3 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat p {
+            color: var(--medium-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .newsletter h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 0;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            white-space: nowrap;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3,
+        .footer-section h4 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(192, 160, 98, 0.2);
+            opacity: 0.8;
+        }
+        
+        /* Mobile Menu - Hamburger Style */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background: var(--gold);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        /* Hamburger to X animation */
+        .mobile-menu.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .mobile-menu.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Mobile Menu Side Panel */
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background: white;
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            padding: 2rem 1.5rem;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-menu-panel.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+            margin-top: 3rem;
+        }
+        
+        .mobile-nav-links li {
+            margin: 1.5rem 0;
+        }
+        
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(192, 160, 98, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-links a:hover {
+            color: var(--gold);
+            padding-left: 10px;
+        }
+        
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .mobile-logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .mobile-logo img {
+            height: 32px;
+            width: auto;
+        }
+        
+        .close-menu {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--black);
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .close-menu:hover {
+            background: rgba(192, 160, 98, 0.1);
+            color: var(--gold);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-form input {
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        /* Article Page */
+        .article-page {
+            display: none;
+            padding-top: 70px;
+        }
+        
+        .article-page.active {
+            display: block;
+        }
+        
+        .article-hero {
+            height: 60vh;
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+        
+        .article-hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            max-width: 800px;
+            padding: 0 20px;
+            line-height: 1.2;
+        }
+        
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .article-meta {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .article-text {
+            margin-bottom: 2rem;
+        }
+        
+        .article-back {
+            display: inline-block;
+            margin: 3rem 0;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        
+        .article-back:hover {
+            background: var(--dark-gold);
+            transform: translateX(-5px);
+        }
+        
+        /* Loading Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDAgODAiIHdpZHRoPSIzMDAiIGhlaWdodD0iODAiPgogIDwhLS0gRUxFTUVOVEkgQk9UQU5JQ0kgTElORSBBUlQgZGFsbCdpbGx1c3RyYXppb25lIDM1OC5qcGcgLS0+CiAgPCEtLSBGb2dsaWUgZGVsaWNhdGUgaW50b3JuaW8gYWxsYSBjb25jaGdsaWEgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNSwgMTUpIj4KICAgIDwhLS0gRm9nbGlhIHNpbmlzdHJhIHN1cGVyaW9yZSAtLT4KICAgIDxwYXRoIGQ9Ik0xMCA1IEMxMiAzLCAxNiAzLCAxOCA1IEMyMCA3LCAyMCAxMSwgMTggMTMgQzE2IDE1LCAxMiAxNSwgMTAgMTMgQzggMTEsIDggNywgMTAgNSBaIiAKICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0QTQ4NCIgc3Ryb2tlLXdpZHRoPSIwLjgiIG9wYWNpdHk9IjAuNyIvPgogICAgPGxpbmUgeDE9IjEwIiB5MT0iOSIgeDI9IjE4IiB5Mj0iOSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC43Ii8+CiAgICAKICAgIDwhLS0gRm9nbGlhIGRlc3RyYSBzdXBlcmlvcmUgLS0+CiAgICA8cGF0aCBkPSJNNDIgNSBDNDQgMywgNDggMywgNTAgNSBDNTIgNywgNTIgMTEsIDUwIDEzIEM0OCAxNSwgNDQgMTUsIDQyIDEzIEM0MCAxMSwgNDAgNywgNDIgNSBaIiAKICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0QTQ4NCIgc3Ryb2tlLXdpZHRoPSIwLjgiIG9wYWNpdHk9IjAuNyIvPgogICAgPGxpbmUgeDE9IjQyIiB5MT0iOSIgeDI9IjUwIiB5Mj0iOSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC43Ii8+CiAgICAKICAgIDwhLS0gRm9nbGlhIHNpbmlzdHJhIGluZmVyaW9yZSAtLT4KICAgIDxwYXRoIGQ9Ik04IDMwIEMxMCAyOCwgMTQgMjgsIDE2IDMwIEMxOCAzMiwgMTggMzYsIDE2IDM4IEMxNCA0MCwgMTAgNDAsIDggMzggQzYgMzYsIDYgMzIsIDggMzAgWiIgCiAgICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjciLz4KICAgIDxsaW5lIHgxPSI4IiB5MT0iMzQiIHgyPSIxNiIgeTI9IjM0IiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjciLz4KICAgIAogICAgPCEtLSBGb2dsaWEgZGVzdHJhIGluZmVyaW9yZSAtLT4KICAgIDxwYXRoIGQ9Ik00NCAzMCBDNDYgMjgsIDUwIDI4LCA1MiAzMCBDNTQgMzIsIDU0IDM2LCA1MiAzOCBDNTAgNDAsIDQ2IDQwLCA0NCAzOCBDNDIgMzYsIDQyIDMyLCA0NCAzMCBaIiAKICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0QTQ4NCIgc3Ryb2tlLXdpZHRoPSIwLjgiIG9wYWNpdHk9IjAuNyIvPgogICAgPGxpbmUgeDE9IjQ0IiB5MT0iMzQiIHgyPSI1MiIgeTI9IjM0IiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjciLz4KICA8L2c+CgogIDwhLS0gSUNPTkEgUFJJTkNJUEFMRTogQ29uY2hpZ2xpYSBkaSBBZnJvZGl0ZSBjb24gZGV0dGFnbGkgYm90YW5pY2kgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUsIDE1KSI+CiAgICA8IS0tIENvbmNoaWdsaWEgcHJpbmNpcGFsZSAtLT4KICAgIDxwYXRoIGQ9Ik0yNSAxNSBDMzUgMTAsIDQ1IDE1LCA1MCAyMCBDNTUgMjUsIDU1IDM1LCA1MCA0MCBDNDUgNDUsIDM1IDUwLCAyNSA0NSBDMTUgNDAsIDEwIDMwLCAxNSAyMCBDMjAgMTUsIDI1IDE1LCAyNSAxNSBaIiAKICAgICAgICAgIGZpbGw9IiNENEFGMzciIHN0cm9rZT0iI0I4OTUyRSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICAKICAgIDwhLS0gTGluZWUgaW50ZXJuZSBkZWxsYSBjb25jaGlnbGlhIC0tPgogICAgPGxpbmUgeDE9IjI1IiB5MT0iMjAiIHgyPSIzNSIgeTI9IjMwIiBzdHJva2U9IiNCODk1MkUiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjgiLz4KICAgIDxsaW5lIHgxPSIyMCIgeTE9IjI1IiB4Mj0iMzAiIHkyPSIzNSIgc3Ryb2tlPSIjQjg5NTJFIiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC44Ii8+CiAgICA8bGluZSB4MT0iMzAiIHkxPSIyNSIgeDI9IjQwIiB5Mj0iMzUiIHN0cm9rZT0iI0I4OTUyRSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuOCIvPgogICAgCiAgICA8IS0tIERldHRhZ2xpIGRlY29yYXRpdmkgYm90YW5pY2kgc3VsbGEgY29uY2hpZ2xpYSAoZHJhcHBlZ2dpbyBldGVyZW8pIC0tPgogICAgPHBhdGggZD0iTTIyIDIyIEMyNCAyMCwgMjYgMjAsIDI4IDIyIEMzMCAyNCwgMzAgMjYsIDI4IDI4IEMyNiAzMCwgMjQgMzAsIDIyIDI4IEMyMCAyNiwgMjAgMjQsIDIyIDIyIFoiIAogICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuOCIgb3BhY2l0eT0iMC42Ii8+CiAgICAKICAgIDwhLS0gTGluZWUgY3VydmUgZGVsaWNhdGUgY2hlIGV2b2Nhbm8gaWwgZHJhcHBlZ2dpbyBkZWxsJ2lsbHVzdHJhemlvbmUgLS0+CiAgICA8cGF0aCBkPSJNMTggMzAgUTIyIDI4LCAyNiAzMCBRMzAgMzIsIDMyIDM1IiAKICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0QTQ4NCIgc3Ryb2tlLXdpZHRoPSIwLjYiIG9wYWNpdHk9IjAuNSIvPgogICAgPHBhdGggZD0iTTMyIDI1IFEyOCAyMywgMjQgMjUgUTIyIDI3LCAyMCAzMCIgCiAgICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjUiLz4KICA8L2c+CiAgCiAgPCEtLSBFTEVNRU5USSBCT1RBTklDSSBBR0dJVU5USVZJIGludG9ybm8gYWwgdGVzdG8gLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODAsIDgpIj4KICAgIDwhLS0gUGljY29saSByYW1ldHRpIGRlY29yYXRpdmkgLS0+CiAgICA8cGF0aCBkPSJNMTAgNSBRMTUgMywgMjAgNSBRMjUgNywgMzAgNSIgCiAgICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjQiLz4KICAgIDxwYXRoIGQ9Ik02MCA1IFE2NSAzLCA3MCA1IFE3NSA3LCA4MCA1IiAKICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0QTQ4NCIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuNCIvPgogICAgCiAgICA8IS0tIEZvZ2xpZSBwaWNjb2xlIHN1aSByYW1ldHRpIC0tPgogICAgPHBhdGggZD0iTTE4IDQgQzE5IDMsIDIxIDMsIDIyIDQgQzIzIDUsIDIzIDcsIDIyIDggQzIxIDksIDE5IDksIDE4IDggQzE3IDcsIDE3IDUsIDE4IDQgWiIgCiAgICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC40IiBvcGFjaXR5PSIwLjYiLz4KICAgIDxwYXRoIGQ9Ik02OCA0IEM2OSAzLCA3MSAzLCA3MiA0IEM3MyA1LCA3MyA3LCA3MiA4IEM3MSA5LCA2OSA5LCA2OCA4IEM2NyA3LCA2NyA1LCA2OCA0IFoiIAogICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuNCIgb3BhY2l0eT0iMC42Ii8+CiAgPC9nPgogIAogIDwhLS0gVEVTVE86IEFQSFJPRElURSBpbiBHYXJhbW9uZCBsdXh1cnkgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODAsIDIwKSI+CiAgICA8dGV4dCB4PSIwIiB5PSIyNSIgZm9udC1mYW1pbHk9IkdhcmFtb25kLCBHZW9yZ2lhLCBzZXJpZiIgCiAgICAgICAgICBmb250LXNpemU9IjI4IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjRDRBRjM3IiAKICAgICAgICAgIGxldHRlci1zcGFjaW5nPSIyIj5BUEhST0RJVEU8L3RleHQ+CiAgICAKICAgIDwhLS0gTGluZWEgZWxlZ2FudGUgLS0+CiAgICA8bGluZSB4MT0iMCIgeTE9IjMwIiB4Mj0iMTgwIiB5Mj0iMzAiIHN0cm9rZT0iI0M5QTIzNyIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICAKICAgIDwhLS0gU290dG90aXRvbG8gY29uIHRvY2NvIGJvdGFuaWNvIC0tPgogICAgPHRleHQgeD0iMCIgeT0iNTAiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLCBBcmlhbCwgc2Fucy1zZXJpZiIgCiAgICAgICAgICBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iMzAwIiBmaWxsPSIjOEI3MzU1IiAKICAgICAgICAgIGxldHRlci1zcGFjaW5nPSIxLjUiPkRJVklORSBCRUFVVFk8L3RleHQ+CiAgICAKICAgIDwhLS0gRGVjb3JhemlvbmUgYm90YW5pY2EgZmluYWxlIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTg1LCA0NSkiPgogICAgICA8cGF0aCBkPSJNMCA1IFE1IDMsIDEwIDUgUTE1IDcsIDIwIDUiIAogICAgICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjQiLz4KICAgICAgPHBhdGggZD0iTTggNCBDOSAzLCAxMSAzLCAxMiA0IEMxMyA1LCAxMyA3LCAxMiA4IEMxMSA5LCA5IDksIDggOCBDNyA3LCA3IDUsIDggNCBaIiAKICAgICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuNCIgb3BhY2l0eT0iMC42Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4=
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fashion">Fashion</a></li>
+                    <li><a href="#about">Chi Siamo</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                </ul>
+                <div class="mobile-menu" id="hamburger-menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+    
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobile-panel">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNTAiIHdpZHRoPSIyMDAiIGhlaWdodD0iNTAiPgogIDwhLS0gRUxFTUVOVEkgQk9UQU5JQ0kgTElORSBBUlQgcGVyIG1vYmlsZSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4LCA4KSI+CiAgICA8IS0tIEZvZ2xpZSBzZW1wbGlmaWNhdGUgcGVyIG1vYmlsZSAtLT4KICAgIDxwYXRoIGQ9Ik02IDMgQzcgMiwgOSAyLCAxMCAzIEMxMSA0LCAxMSA2LCAxMCA3IEM5IDgsIDcgOCwgNiA3IEM1IDYsIDUgNCwgNiAzIFoiIAogICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuNiIgb3BhY2l0eT0iMC43Ii8+CiAgICA8cGF0aCBkPSJNMTggMyBDMTkgMiwgMjEgMiwgMjIgMyBDMjMgNCwgMjMgNiwgMjIgNyBDMjEgOCwgMTkgOCwgMTggNyBDMTcgNiwgMTcgNCwgMTggMyBaIiAKICAgICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M0QTQ4NCIgc3Ryb2tlLXdpZHRoPSIwLjYiIG9wYWNpdHk9IjAuNyIvPgogIDwvZz4KCiAgPCEtLSBJQ09OQTogQ29uY2hpZ2xpYSBkaSBBZnJvZGl0ZSBjb24gZGV0dGFnbGkgYm90YW5pY2ggcmlkb3R0aSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMCwgMTApIj4KICAgIDxwYXRoIGQ9Ik0xNSAxMCBDMjAgOCwgMjUgMTAsIDI4IDEyIEMzMCAxNCwgMzAgMTgsIDI4IDIwIEMyNSAyMiwgMjAgMjQsIDE1IDIyIEMxMCAyMCwgOCAxNiwgMTAgMTQgQzEyIDEyLCAxNSAxMCwgMTUgMTAgWiIgCiAgICAgICAgICBmaWxsPSIjRDRBRjM3IiBzdHJva2U9IiNCODk1MkUiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8bGluZSB4MT0iMTUiIHkxPSIxMiIgeDI9IjIyIiB5Mj0iMTgiIHN0cm9rZT0iI0I4OTUyRSIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuOCIvPgogICAgCiAgICA8IS0tIERldHRhZ2xpbyBib3RhbmljbyBtaW5pbW8gLS0+CiAgICA8cGF0aCBkPSJNMTIgMTQgQzEzIDEzLCAxNCAxMywgMTUgMTQgQzE2IDE1LCAxNiAxNywgMTUgMTggQzE0IDE5LCAxMyAxOSwgMTIgMTggQzExIDE3LCAxMSAxNSwgMTIgMTQgWiIgCiAgICAgICAgICBmaWxsPSJub25lIiBzdHJva2U9IiNDNEE0ODQiIHN0cm9rZS13aWR0aD0iMC42IiBvcGFjaXR5PSIwLjYiLz4KICA8L2c+CiAgCiAgPCEtLSBURVNUTzogQVBIUk9ESVRFIG1vYmlsZSBjb24gdG9jY28gYm90YW5pY28gLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAsIDE1KSI+CiAgICA8dGV4dCB4PSIwIiB5PSIxNSIgZm9udC1mYW1pbHk9IkdhcmFtb25kLCBHZW9yZ2lhLCBzZXJpZiIgCiAgICAgICAgICBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjRDRBRjM3IiAKICAgICAgICAgIGxldHRlci1zcGFjaW5nPSIxIj5BUEhST0RJVEU8L3RleHQ+CiAgICAKICAgIDwhLS0gU290dG90aXRvbG8gcmlkb3R0byBjb24gZGV0dGFnbGlvIGJvdGFuaWNvIC0tPgogICAgPHRleHQgeD0iMCIgeT0iMjgiIGZvbnQtZmFtaWx5PSInSGVsdmV0aWNhIE5ldWUnLCBBcmlhbCwgc2Fucy1zZXJpZiIgCiAgICAgICAgICBmb250LXNpemU9IjciIGZvbnQtd2VpZ2h0PSIzMDAiIGZpbGw9IiM4QjczNTUiIAogICAgICAgICAgbGV0dGVyLXNwYWNpbmc9IjAuNSI+RElWSU5FIEJFQVVUWTwvdGV4dD4KICAgIAogICAgPCEtLSBEZWNvcmF6aW9uZSBib3RhbmljYSBmaW5hbGUgbW9iaWxlIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIwLCAyNikiPgogICAgICA8cGF0aCBkPSJNMCAyIFEzIDEsIDYgMiBROSAzLCAxMiAyIiAKICAgICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzRBNDg0IiBzdHJva2Utd2lkdGg9IjAuNCIgb3BhY2l0eT0iMC41Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4=
+            </div>
+            <button class="close-menu" id="close-menu">×</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#fashion" class="mobile-nav-link">Fashion</a></li>
+            <li><a href="#about" class="mobile-nav-link">Chi Siamo</a></li>
+            <li><a href="#newsletter" class="mobile-nav-link">Newsletter</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section - NASCOSTA per richiesta utente -->
+    <!-- 
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Aphrodite</h1>
+            <p>Il tuo punto di riferimento per moda, lifestyle e bellezza</p>
+            <div>
+                <a href="#fashion" class="btn btn-primary">Scopri la Moda</a>
+                <a href="#newsletter" class="btn btn-secondary">Iscriviti</a>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Fashion Section - INIZIO SITO -->
+    <section id="home" class="section">
+        <div class="container">
+            <h2 class="section-title">Fashion & Trends</h2>
+            <div class="posts-grid">
+                <a href="#article/1" class="post-card fade-in" data-article-id="1">
+                    <div class="post-image">Profumi di Lusso 2025</div>
+                    <div class="post-content">
+                        <span class="post-category">Ready-to-Wear</span>
+                        <h3>Profumi di Lusso: I Nuovi Must-Have del 2025</h3>
+                        <p>Scopri le Essenze più Raffinate che Stanno Conquistando le Passeges di Milano e le Boutique di Tutto il Mondo</p>
+                        <div class="post-meta">25 Ottobre 2025 • by Aphrodite Team</div>
+                    </div>
+                </a>
+                
+                <a href="#article/2" class="post-card fade-in" data-article-id="2">
+                    <div class="post-image">Lupita Nyong'o Red Carpet</div>
+                    <div class="post-content">
+                        <span class="post-category">Red Carpet</span>
+                        <h3>Lupita Nyong'o: Eleganza Assoluta agli Awards</h3>
+                        <p>L'Interprete di "Black Panther" Incanta con un Look da Red Carpet Indimenticabile che Definisce il Nuovo Standard dell'Eleganza</p>
+                        <div class="post-meta">24 Ottobre 2025 • by Aphrodite Team</div>
+                    </div>
+                </a>
+                
+                <a href="#article/3" class="post-card fade-in" data-article-id="3">
+                    <div class="post-image">Street Style Milano</div>
+                    <div class="post-content">
+                        <span class="post-category">Street Style</span>
+                        <h3>Street Style: L'Arte di Vestirsi con Eleganza Quotidiana</h3>
+                        <p>I Segreti per Creare Look Raffinati per Ogni Occasione della Vita Moderna, Ispirati alle Strade di Milano</p>
+                        <div class="post-meta">23 Ottobre 2025 • by Aphrodite Team</div>
+                    </div>
+                </a>
+                
+                <a href="#article/4" class="post-card fade-in" data-article-id="4">
+                    <div class="post-image">Occhiali da Sole Luxury</div>
+                    <div class="post-content">
+                        <span class="post-category">Accessori</span>
+                        <h3>Occhiali da Sole Luxury: Protezione e Stile</h3>
+                        <p>I Modelli più Raffinati per Proteggere lo Sguardo con Eleganza Inconfondibile e Distinguersi in Ogni Occasione</p>
+                        <div class="post-meta">22 Ottobre 2025 • by Aphrodite Team</div>
+                    </div>
+                </a>
+                
+                <a href="#article/5" class="post-card fade-in" data-article-id="5">
+                    <div class="post-image">Abito di Seta Rossa</div>
+                    <div class="post-content">
+                        <span class="post-category">Ready-to-Wear</span>
+                        <h3>Il Potere del Rosso: L'Eleganza della Seta</h3>
+                        <p>Come Indossare l'Abito Rosso per Ogni Occasione con Raffinatezza e Personalità, Ispirandosi ai Grandi Stilisti</p>
+                        <div class="post-meta">21 Ottobre 2025 • by Aphrodite Team</div>
+                    </div>
+                </a>
+                
+                <a href="#article/6" class="post-card fade-in" data-article-id="6">
+                    <div class="post-image">Tendenza Prugna Autunnale</div>
+                    <div class="post-content">
+                        <span class="post-category">Street Style</span>
+                        <h3>Purple Reign: Tendenza Prugna per l'Autunno</h3>
+                        <p>Come Stylizzare il Colore Prugna nei Tuoi Outfit Quotidiani con Eleganza e Creatività, La Nuova Collezione</p>
+                        <div class="post-meta">20 Ottobre 2025 • by Aphrodite Team</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Chi Siamo</h2>
+                    <p><strong>Aphrodite</strong> è il universo della bellezza e dell'eleganza, nato con la passione per la grazia divina, lo stile senza tempo e la bellezza eterna.</p>
+                    <p>Fondato a Milano, il cuore della moda europea, seguiamo le ultime tendenze dal mondo del fashion, beauty e lifestyle, offrendo ai nostri lettori ispirazione e guide esclusive per vivere con stile.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>50M+</h3>
+                            <p>Follower</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Brand Collaborations</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Anni di Successo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-image fade-in">Il Nostro Team</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2>Resta Aggiornata</h2>
+            <p>Iscriviti alla nostra newsletter per non perdere le ultime tendenze fashion e lifestyle</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Inserisci la tua email" required>
+                <button type="submit" class="btn btn-primary">Iscriviti</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aphrodite</h3>
+                    <p>Il tuo punto di riferimento per moda, lifestyle e bellezza dal 2010. Segui le nostre storie di stile quotidiano e scopri le ultime tendenze dal mondo del fashion.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categorie</h4>
+                    <ul>
+                        <li><a href="#fashion">Fashion</a></li>
+                        <li><a href="#fashion">Lifestyle</a></li>
+                        <li><a href="#fashion">Beauty</a></li>
+                        <li><a href="#fashion">Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Informazioni</h4>
+                    <ul>
+                        <li><a href="#about">Chi Siamo</a></li>
+                        <li><a href="#newsletter">Contatti</a></li>
+                        <li><a href="#newsletter">Privacy Policy</a></li>
+                        <li><a href="#newsletter">Termini di Servizio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguici</h4>
+                    <ul>
+                        <li><a href="#newsletter">Instagram</a></li>
+                        <li><a href="#newsletter">Twitter</a></li>
+                        <li><a href="#newsletter">YouTube</a></li>
+                        <li><a href="#newsletter">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aphrodite. Tutti i diritti riservati. Sviluppato con ❤️ per gli amanti della bellezza e dell'eleganza divina.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ALL JAVASCRIPT INLINE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offsetTop = target.offsetTop - 70; // Account for fixed header
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Handle "Home" menu link - redirect to Fashion section
+            document.querySelectorAll('a[href="#home"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const fashionSection = document.getElementById('fashion');
+                    if (fashionSection) {
+                        const offsetTop = fashionSection.offsetTop - 70;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Newsletter form submission
+            document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                if (email) {
+                    alert('Grazie per l\'iscrizione! Ti terremo aggiornata con le ultime novità di Aphrodite.');
+                    this.reset();
+                }
+            });
+
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Header background change on scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+
+            // Mobile Menu Functionality - Professional Hamburger Menu
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const mobilePanel = document.getElementById('mobile-panel');
+            const closeMenu = document.getElementById('close-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            let isMenuOpen = false;
+
+            function openMobileMenu() {
+                if (isMenuOpen) return;
+                
+                isMenuOpen = true;
+                hamburgerMenu.classList.add('active');
+                mobileOverlay.classList.add('active');
+                mobilePanel.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent body scroll
+            }
+
+            function closeMobileMenu() {
+                if (!isMenuOpen) return;
+                
+                isMenuOpen = false;
+                hamburgerMenu.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                mobilePanel.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Restore body scroll
+            }
+
+            // Toggle menu
+            hamburgerMenu.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            // Close menu with X button
+            closeMenu.addEventListener('click', closeMobileMenu);
+
+            // Close menu when clicking on overlay
+            mobileOverlay.addEventListener('click', closeMobileMenu);
+
+            // Close menu when clicking on a nav link
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Close menu with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isMenuOpen) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Prevent click events from bubbling up when clicking inside the panel
+            mobilePanel.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            console.log('🍔 STILE PURO: Loaded successfully! Version: 2025-10-26 21:30:50');
+            
+            // Show confirmation that new code is loaded
+            setTimeout(() => {
+                if (document.getElementById('hamburger-menu')) {
+                    console.log('✅ Hamburger menu element found in DOM');
+                    console.log('✅ Menu ready for testing on mobile devices');
+                    console.log('✅ Article system ready - click on any article to test!');
+                } else {
+                    console.error('❌ Hamburger menu element NOT found');
+                }
+            }, 1000);
+
+            // Article Navigation System
+            const sections = document.querySelectorAll('.hero, .section, .about, .newsletter, footer');
+            
+            // Create article page container
+            const articleContainer = document.createElement('div');
+            articleContainer.className = 'article-page';
+            articleContainer.id = 'article-page';
+            document.body.insertBefore(articleContainer, document.body.firstChild);
+            
+            // Article content database
+            const articles = {
+                1: {
+                    title: "Profumi di Lusso: I Nuovi Must-Have del 2025",
+                    category: "Ready-to-Wear",
+                    date: "25 Ottobre 2025",
+                    author: "Aphrodite Team",
+                    content: `
+                        <p>Il 2025 si apre con una rivoluzione nel mondo della profumeria di lusso. Le più esclusive Maison cosmopolite stanno ridefinendo il concetto stesso di essenza, creando profumi che non sono semplicemente fragrance, ma veri e propri atti di ribellione olfattiva.</p>
+                        
+                        <p>Nelle passeges di Milano, tra le boutique più esclusive di Via Montenapoleone, stanno emergendo le creazioni più innovative di quest'anno. I master perfumers stanno sperimentando con note mai sentite prima: dalla resina di Boswellia Sacra del Madagascar alle essenze floreali rare della Siberia, ogni componente è scelto per la sua unicità e la sua capacità di trasportare chi indossa in un viaggio sensoriale senza confini.</p>
+                        
+                        <div class="article-text">
+                            <h3>Le Novità più Attese</h3>
+                            <p>Tra le creazioni più innovative troviamo "Eclipse Noir" di Maison Rouge, un profumo che cattura l'essenza dell'eclissi stellare in una bottiglia dorata. Le sue note di testa includono bergamotto nero e pepe rosa, evolvendo in un cuore di rosa damascena e oud alle spezie, per chiudere con un fondo di vaniglia bourbon e legni preziosi.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>L'Arte della Personalizzazione</h3>
+                            <p>La vera rivoluzione di quest'anno è la possibilità di personalizzare ogni fragranza. Le clienti più esigenti possono ora creare il proprio profumo su misura, scegliendo tra centinaia di essenze rare e lavorando con i migliori profumieri del mondo per sviluppare una fragranza unica e irripetibile.</p>
+                        </div>
+                        
+                        <p>Questa nuova era della profumeria di lusso rappresenta il futuro dell'eleganza italiana: raffinatezza senza compromessi, innovazione senza perdere la tradizione, e soprattutto, la capacità di ogni donna di esprimere la propria personalità attraverso un profumo che parla la sua lingua più intima.</p>
+                    `
+                },
+                2: {
+                    title: "Lupita Nyong'o: Eleganza Assoluta agli Awards",
+                    category: "Red Carpet",
+                    date: "24 Ottobre 2025",
+                    author: "Aphrodite Team",
+                    content: `
+                        <p>Lupita Nyong'o ha incantato ancora una volta il mondo degli Awards con un look che definisce il nuovo standard dell'eleganza da red carpet. La talentuosa interprete di "Black Panther" ha scelto un abito straordinario che combina l'arte sartoriale contemporanea con un'eleganza senza tempo.</p>
+                        
+                        <p>L'abito, firmato da una delle maison parigine più esclusive, è un capolavoro di sartoria contemporanea. Il tessuto, una seta crema con disegni delicati ricamati a mano, racconta una storia di bellezza e raffinatezza che va oltre la moda per diventare arte pura. I cristalli Swarovski che ornano ogni dettaglio creano un gioco di luci che cattura l'attenzione senza mai essere eccessivo.</p>
+                        
+                        <div class="article-text">
+                            <h3>Il Potere dell'Eleganza</h3>
+                            <p>Ciò che rende questo look indimenticabile non è solo l'abito, ma la grazia naturale con cui Lupita lo porta. Ogni movimento, ogni gesto, ogni sguardo trasmette una sicurezza e una bellezza che parlano a ogni donna: l'eleganza vera non è solo quello che indossi, ma come lo indossi.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>L'Ispirazione per l'Autunno</h3>
+                            <p>Questo look rappresenta l'ispirazione perfetta per l'autunno 2025: eleganza raffinata, comfort senza sacrificare lo stile, e soprattutto, la capacità di sentirsi a proprio agio nella propria pelle. Le linee pulite e il tessuto di qualità sono gli elementi chiave per replicare questo stile nella vita quotidiana.</p>
+                        </div>
+                        
+                        <p>Lupita Nyong'o continua a dimostrare che l'eleganza non conosce confini di etnia o di stile. Il suo look di questa sera sarà ricordato come uno dei momenti più belli dell'anno, ispirando migliaia di donne a riscoprire la propria bellezza attraverso l'arte del vestirsi con stile e personalità.</p>
+                    `
+                },
+                3: {
+                    title: "Street Style: L'Arte di Vestirsi con Eleganza Quotidiana",
+                    category: "Street Style",
+                    date: "23 Ottobre 2025",
+                    author: "Aphrodite Team",
+                    content: `
+                        <p>Le strade di Milano si trasformano ogni giorno in una passerella naturale, dove le donne più eleganti della città dimostrano che l'arte di vestirsi con stile non è privilegio delle occasioni speciali, ma un modo di vivere quotidiano.</p>
+                        
+                        <p>Il nuovo street style milanese per l'autunno 2025 si ispira a una filosofia semplice ma rivoluzionaria: comfort, eleganza e personalità devono coesistere in perfetto equilibrio. Nelle vie più esclusive, dalle Cinque Giornate a Corso Venezia, si possono ammirare look che trasformano l'ordinario in straordinario.</p>
+                        
+                        <div class="article-text">
+                            <h3>I Segreti delle Milano Ladies</h3>
+                            <p>Le donne più eleganti di Milano hanno perfezionato l'arte di combinare pezzi di qualità: un cappotto in cachemire beige, una borsa in pelle di vitello martellata, scarpe comode ma raffinate, e sempre quel tocco di colore che illumina il look senza mai essere eccessivo.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>L'Essenza dell'Eleganza Moderne</h3>
+                            <p>Questa nuova corrente di eleganza quotidiana insegna che non serve essere perfette per essere eleganti. L'importante è scegliere con cura ogni pezzo, prediligere tessuti di qualità, e soprattutto, sentirsi a proprio agio con quello che si indossa. L'eleganza autentica nasce dalla sicurezza in se stesse.</p>
+                        </div>
+                        
+                        <p>Lo street style milanese dell'autunno 2025 ci insegna che l'eleganza è un linguaggio universale, capace di parlare al cuore di ogni donna che sceglie di esprimere se stessa attraverso il proprio stile, con la consapevolezza che la vera bellezza viene dall'interno e si riflette armoniosamente nell'esterno.</p>
+                    `
+                },
+                4: {
+                    title: "Occhiali da Sole Luxury: Protezione e Stile",
+                    category: "Accessori",
+                    date: "22 Ottobre 2025",
+                    author: "Aphrodite Team",
+                    content: `
+                        <p>La protezione dello sguardo non deve mai sacrificare l'eleganza. Per l'autunno-inverno 2025, i brand di lusso stanno ridefinendo il concetto di occhiali da sole, trasformandoli da semplici protezioni solari a veri e propri gioielli funzionali.</p>
+                        
+                        <p>Nelle boutique più esclusive di Milano, negli showroom di Parigi e negli atelier di Milano, stanno nascendo creazioni uniche che uniscono artigianalità e tecnologia all'avanguardia. Ogni montatura è un'opera d'arte, ogni lente una porta verso un mondo più luminoso e protegido.</p>
+                        
+                        <div class="article-text">
+                            <h3>L'Arte della manifattura</h3>
+                            <p>I maestri occhialaì italiani stanno utilizzando materiali mai visti prima: acetato di cellulosa derivato da fonti sostenibili, lenti in cristallo con trattamenti fotocromatici invisibili, e montature in titanio decorate con tecniche di smaltatura a mano che ricordano i gioielli di epoca vittoriana.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>Proteggere con Eleganza</h3>
+                            <p>La vera innovazione di quest'anno è la capacità di creare occhiali che proteggono gli occhi dai raggi UV dannosi senza compromettere lo stile. Le lenti polarizzate sono ora disponibili in sfumature di colore naturali che si adattano perfettamente a ogni tonalità di pelle, esaltando la bellezza naturale di chi li indossa.</p>
+                        </div>
+                        
+                        <p>Gli occhiali da sole luxury dell'autunno 2025 rappresentano il futuro della protezione solare elegante: tecnologia all'avanguardia racchiusa in design senza tempo, per proteggere la bellezza del proprio sguardo con la raffinatezza che solo l'artigianalità italiana sa offrire.</p>
+                    `
+                },
+                5: {
+                    title: "Il Potere del Rosso: L'Eleganza della Seta",
+                    category: "Ready-to-Wear",
+                    date: "21 Ottobre 2025",
+                    author: "Aphrodite Team",
+                    content: `
+                        <p>Il rosso non è solo un colore, è un'emozione. La seta rossa, in particolare, ha il potere di trasformare ogni donna in un'opera d'arte vivente, capace di comunicare passione, forza e eleganza in un solo gesto.</p>
+                        
+                        <p>Per la stagione autunnale 2025, i grandi stilisti stanno rivisitando il classico abito di seta rossa con tagli contemporanei che esaltano la figura femminile senza mai essere aggressivi. Dalle passerelle di Milano ai salotti più esclusivi, questo tessuto prezioso torna a conquistare il guardarobo delle donne eleganti.</p>
+                        
+                        <div class="article-text">
+                            <h3>L'Arte della Seta</h3>
+                            <p>La seta rossa di quest'autunno è speciale: deriva da bachi di seta nutrite con foglie di gelso rosso, risultando in filati più brillanti e resistenti. Il processo di tintura utilizza pigmenti naturali che creano sfumature uniche, da rosso rubino a rosso carminio, capaci di cambiare colore a seconda della luce.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>Eleganza per Ogni Occasione</h3>
+                            <p>L'abito di seta rossa non è più solo per le occasioni speciali. I nuovi tagli, più casual ma sempre raffinati, lo rendono perfetto per il lavoro come per l'aperitivo. La chiave è saperlo indossare con personalità: con sneakers eleganti per un look day, con sandali dorati per la sera.</p>
+                        </div>
+                        
+                        <p>Indossare un abito di seta rossa significa scegliere di essere viste, ma non per catturare l'attenzione, bensì per esprimere la propria personalità più autentica. È un gesto di coraggio e di amore per se stesse che ogni donna merita di fare, soprattutto in un'autunno che ci ricorda quanto sia prezioso vivere con stile e passione.</p>
+                    `
+                },
+                6: {
+                    title: "Purple Reign: Tendenza Prugna per l'Autunno",
+                    category: "Street Style",
+                    date: "20 Ottobre 2025",
+                    author: "Aphrodite Team",
+                    content: `
+                        <p>Il colore protagonista dell'autunno 2025 è un prugna sofisticato, capace di comunicare eleganza, mistero e personalità in un'unica sfumatura. Dalle passerelle di Milano alle strade di Parigi, questa tonalità sta conquistando il guardarobo delle donne più moderne e raffinate.</p>
+                        
+                        <p>La nuova collezione autunnale dedica un'attenzione particolare al prugna: dalla maglieria in cachemire agli abiti da cocktail, dalle scarpe in camoscio alle borse in pelle martellata. Questo colore ha il potere magico di valorizzare ogni tipo di pelle, esaltando la bellezza naturale di chi lo indossa.</p>
+                        
+                        <div class="article-text">
+                            <h3>Come Stylizzare il Prugna</h3>
+                            <p>Il segreto per indossare il prugna con eleganza è la combinazione dei toni. Funziona alla perfezione con beige, avorio, e naturalmente con il nero classico. Per un look da giorno, abbinatelo a camicie bianche e pantaloni in flanella grigia; per la sera, create contrasti audaci con oro giallo e dettagli in cristallo.</p>
+                        </div>
+                        
+                        <div class="article-text">
+                            <h3>Il Prugna nella Vita Quotidiana</h3>
+                            <p>Non deve essere intimidatorio: un maglione prugna in cachemire, dei jeans neri e scarpe comode creano un look perfettamente bilanciato tra eleganza e comfort. O una giacca prugna con jeans blu e ballerine può trasformare un outfit casual in qualcosa di speciale senza sforzi eccessivi.</p>
+                        </div>
+                        
+                        <p>Il prugna dell'autunno 2025 non è solo una tendenza, è un modo di essere: coraggiosa ma raffinata, moderna ma senza tempo, versatile ma sempre elegante. È il colore che ogni donna dovrebbe avere nel proprio guardarobo per sentirsi sicura e bella in ogni occasione.</p>
+                    `
+                }
+            };
+            
+            function showArticle(articleId) {
+                const article = articles[articleId];
+                if (!article) return;
+                
+                // Hide main sections
+                sections.forEach(section => section.style.display = 'none');
+                document.querySelector('header').style.display = 'none';
+                
+                // Show article page
+                articleContainer.classList.add('active');
+                
+                // Create article HTML
+                articleContainer.innerHTML = `
+                    <div class="article-hero">
+                        <h1>${article.title}</h1>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">${article.category} • ${article.date} • by ${article.author}</div>
+                        <div class="article-body">
+                            ${article.content}
+                        </div>
+                        <a href="#fashion" class="article-back">← Torna agli Articoli</a>
+                    </div>
+                `;
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                console.log(`📰 Opening article: ${article.title}`);
+            }
+            
+            function showHome() {
+                // Show main sections
+                sections.forEach(section => section.style.display = '');
+                document.querySelector('header').style.display = '';
+                
+                // Hide article page
+                articleContainer.classList.remove('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                console.log('🏠 Returning to homepage');
+            }
+            
+            // Handle article navigation
+            document.addEventListener('click', (e) => {
+                if (e.target.closest('a[href^="#article/"]')) {
+                    e.preventDefault();
+                    const articleId = e.target.closest('a').getAttribute('href').split('/')[1];
+                    showArticle(articleId);
+                }
+                
+                if (e.target.matches('a[href="#fashion"]') || e.target.closest('a[href="#fashion"]')) {
+                    showHome();
+                }
+            });
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', () => {
+                const hash = window.location.hash;
+                if (hash.startsWith('#article/')) {
+                    const articleId = hash.split('/')[1];
+                    showArticle(articleId);
+                } else {
+                    showHome();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
