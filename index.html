@@ -329,6 +329,38 @@
             margin-top: 3rem;
         }
         
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-member h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-member .role {
+            color: var(--dark-gray);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
         .stat {
             text-align: center;
         }
@@ -593,6 +625,11 @@
                 gap: 1rem;
             }
             
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
             .newsletter-form {
                 flex-direction: column;
                 align-items: center;
@@ -836,7 +873,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="post-image fade-in">Il Nostro Team</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="fade-in">Il Nostro Team</h2>
+            <div class="team-grid fade-in">
+                <div class="team-member">
+                    <h3>Maria Bianchi</h3>
+                    <p class="role">Direttrice Creativa</p>
+                    <p>Esperta di moda con oltre 15 anni di esperienza nel settore luxury.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Giulia Rossi</h3>
+                    <p class="role">Fashion Editor</p>
+                    <p>Specialista in tendenze e styling, sempre aggiornata sulle ultime novità.</p>
+                </div>
+                <div class="team-member">
+                    <h3>Anna Verdi</h3>
+                    <p class="role">Beauty Expert</p>
+                    <p>Makeup artist e consulente di bellezza, con un occhio per i dettagli.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -874,18 +934,18 @@
                     <h4>Informazioni</h4>
                     <ul>
                         <li><a href="#about">Chi Siamo</a></li>
-                        <li><a href="#newsletter">Contatti</a></li>
-                        <li><a href="#newsletter">Privacy Policy</a></li>
-                        <li><a href="#newsletter">Termini di Servizio</a></li>
+                        <li><a href="mailto:info@aphrodite.com">Contatti</a></li>
+                        <li><a href="#about">Privacy Policy</a></li>
+                        <li><a href="#about">Termini di Servizio</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Seguici</h4>
                     <ul>
-                        <li><a href="#newsletter">Instagram</a></li>
-                        <li><a href="#newsletter">Twitter</a></li>
-                        <li><a href="#newsletter">YouTube</a></li>
-                        <li><a href="#newsletter">TikTok</a></li>
+                        <li><a href="https://instagram.com/aphrodite" target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/aphrodite" target="_blank">Twitter</a></li>
+                        <li><a href="https://youtube.com/@aphrodite" target="_blank">YouTube</a></li>
+                        <li><a href="https://tiktok.com/@aphrodite" target="_blank">TikTok</a></li>
                     </ul>
                 </div>
             </div>
